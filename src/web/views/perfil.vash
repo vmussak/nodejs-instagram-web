@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <title>Instagram</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container row">
+            <a id="sprite-logo" href="index.html"></a>
+            <input type="text" id="pesquisa" placeholder="Busca">
+            <ul id="navlist">
+                <li id="navexplore">
+                    <a href="feed"></a>
+                </li>
+                <li id="navlikes">
+                    <a href=""></a>
+                </li>
+                <li id="navprofile">
+                    <a href="profile/@model.user"></a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="profile-card row">
+            <div class="profile-card-avatar center">
+                <img class="avatar-profile" src="@model.imagemPerfil">
+            </div>
+            <div class="profile-card-info left column">
+                <div class="profile-username">
+                    <h1>@model.user</h1>
+                </div>
+                <div class="profile-stats row">
+                    <div>
+                        <b>@model.posts.length</b> publicações
+                    </div>
+                    <div>
+                        <b>8.530</b> seguidores
+                    </div>
+                    <div>
+                        seguindo <b>621</b>
+                    </div>
+                </div>
+                <div class="profile-description">
+                    <b>@model.nome</b> - @model.frase
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="profile-stats row center">
+            <div>
+                <b>@model.posts.length</b> <br> publicações
+            </div>
+            <div>
+                <b>8.530</b> <br> seguidores
+            </div>
+            <div>
+                seguindo <br> <b>621</b>
+            </div>
+        </div>
+        <div class="profile-grid">
+            @model.posts.forEach(function(item){
+            <a href="#" onclick="showModal(@item.id)">
+                <figure>
+                    <img src="@item.url" alt="">
+                </figure>
+            </a>
+            })
+        </div>
+    </div>
+
+    <div id="modal">
+        <a id="closeModalIcon" href="" onclick="hideModal()"></a>
+        <div class="feed-card row">
+            <div class="feed-card-content">
+                <img class="feed-post-media" src="img/post.jpg">
+            </div>
+            <div class="column">
+                <div class="feed-card-title">
+                    <div class="row">
+                        <img class="avatar" src="img/mussum.jpg">
+                        <p><b>Mussum</b></p>
+                    </div>
+                </div>
+                <hr/>
+                <div class="feed-post-description">
+                    <p><b>Mussum</b> Mézis que é goodis nóis num havis!</p>
+                    <p><b>tiao_macale</b> Nojento!</p>
+                    <p><b>tiao_macale</b> Nojento!</p>
+                    <p><b>tiao_macale</b> Nojento!</p>
+                    <p><b>tiao_macale</b> Nojento!</p>
+                    <p><b>tiao_macale</b> Nojento!</p>
+                    <p><b>tiao_macale</b> Nojento!</p>
+                    <p><b>tiao_macale</b> Nojento!</p>
+                    <p><b>tiao_macale</b> Nojento!</p>
+                    <p><b>tiao_macale</b> Nojento!</p>
+                    <p><b>tiao_macale</b> Nojento!</p>
+                </div>
+                <div class="feed-card-footer">
+                    <hr/>
+                    <div class="column">
+                        <ul id="feed-post-options">
+                            <li id="feed-post-like"></li>
+                            <li id="feed-post-comment"></li>
+                        </ul>
+                        <div class="feed-post-likes">
+                            <p><b>Didi</b>, <b>Dedé</b> e <b>Zacarias</b> curtiram isso.</p>
+                        </div>
+                        <div class="feed-post-timestamp">
+                            <p>Há 3 horas</p>
+                        </div>
+                        <hr/>
+                        <div class="feed-post-comments">
+                            <input type="text" name="new-comment" placeholder="Adicione um comentário...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showModal() {
+            document.getElementById("modal").style.display = "block";
+        };
+
+        function hideModal() {
+            document.getElementById("modal").style.display = "none";
+        };
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <title>Instagram</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="/css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container row centralize">
+            <div class="title-animation-frame">
+                <img class="title-img" src="img/login_img.png">
+                <div class="title-animation"></div>
+            </div>
+            <div class="content column center">
+                <div class="login">
+                    <img class="logo-main" src="img/logo_instagram.png">
+                    <div class="login-form">
+                         <form>
+                            <input type="text" name="usuario" placeholder="Nome de Usuário">
+                            <input type="text" name="senha" placeholder="Senha">
+                        </form>
+                        <button type="button">Entrar</button>
+                    </div>
+                </div>
+
+                <div class="link">
+                    <div class="register-link">
+                        <p>Não tem uma conta? <a href="cadastro">Cadastre-se</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

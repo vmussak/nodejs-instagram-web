@@ -1,0 +1,16 @@
+{
+  "name": "instagram-nodejs-web",
+  "version": "1.0.0",
+  "description": "DEMO - Instagram com Node.js | WEB",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "devbox-linq": "^3.0.3",
+    "express": "^4.14.0",
+    "validation-functions": "^0.1.1",
+    "vash": "^0.12.2"
+  }
+}

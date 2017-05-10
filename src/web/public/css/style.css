@@ -1,0 +1,595 @@
+* {
+    margin: 0px;
+    box-sizing: border-box;
+    -webkit-transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+    -o-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+body {
+    background-color: #fafafa;
+    color: rgba(0, 0, 0, 0.87);
+    font-size: 16px;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.2;
+    text-align: left;
+    margin: 0 auto;
+}
+
+/* ##### Clearfix #####
+   é uma técnica já usada há bastante tempo para evitar
+   que floats se aglomerem, adicionando um espaço vazio tanto
+   antes quanto depois dos elementos */
+.clearfix::before, .clearfix::after {
+    content: "";
+    display: table;
+}
+
+.clearfix::after {
+    clear: both;
+}
+/* ##### Fim do Clearfix ##### */
+
+
+.right {
+    text-align: right;
+}
+
+.center {
+    text-align: center;
+}
+
+.justify {
+    text-align: justify;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.centralize {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+input[type=text] {
+    width: 100%;
+    color: rgba(0, 0, 0, 0.87);
+    border-radius: 3px;
+    border: solid 1px #dbdbdb;
+    padding: 8px;
+    font-size: 1em;
+    outline: none;
+    margin-top: 5px;
+}
+
+input[type=text]::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #b5b5b5;
+}
+
+input[type=text]:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #b5b5b5;
+}
+
+input[type=text]::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #b5b5b5;
+}
+input[type=text]:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #b5b5b5;
+}
+/* Fim da formatação do Placeholder */
+
+button {
+    border: none;
+    border-radius: 3px;
+    min-height: 36px;
+    min-width: 88px;
+    padding: 0.75em 2em;
+    font-size: 0.875em;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 1);
+    background-color: #2196F3;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+button:active {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    background-color: #1976D2;    
+}
+
+/* ##### Formatação de texto default ##### */
+h2, h3 {
+    color: #999;
+    font-size: 1em;
+}
+
+h2 {
+    font-weight: 600;
+}
+
+h3 {
+    font-weight: 300;
+}
+
+p {
+    font-weight: 300;
+}
+
+a, a:link, a:visited {
+    color: #2196F3;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #1976D2;
+    text-decoration: underline;
+    text-shadow: none;
+}
+
+hr {
+    border: 0; 
+    height: 1px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0); 
+}
+
+/* ##### Formatação padrão do header ##### */
+
+header {
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+    border: solid 1px #dbdbdb;
+}
+
+a#sprite-logo {
+    height: 36px;
+    width: 178px;
+    display: block;
+    margin: 6px;
+    background: url(../img/icons.png) -176px 0;
+    -webkit-transition-duration: 0.0s;
+    -moz-transition-duration: 0.0s;
+    transition-duration: 0.0s;
+}
+
+header > .container > input {
+    height: 1.5em;
+    width: 200px;
+    background-color: #fafafa;
+    margin: 10px auto;
+    text-align: center;
+}
+
+#navlist {
+    position: relative;
+    width: 150px;
+}
+
+#navlist li {
+    margin: 12px;
+    padding: 0;
+    top: 0;
+    list-style: none;
+    position: absolute;
+}
+
+#navlist li, #navlist a {
+    height: 25px;
+    display: block;
+}
+
+#navlist #navexplore {
+    left: 0px;
+    width: 25px;
+    background: url('../img/icons.png') -207px -322px;
+}
+
+#navlist #navlikes {
+    left: 41px;
+    width: 25px;
+    background: url('../img/icons.png') -160px -273px;
+}
+
+#navlist #navprofile {
+    left: 82px;
+    width: 25px;
+    background: url('../img/icons.png') -108px -273px;
+}
+
+.container {
+
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+}
+
+.container .content {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.container .title-animation-frame, .container .title-animation-frame .title-img {
+    height: 618px;
+    width: 454px;
+}
+
+/* ##### INICIO - Animação da página de login ##### */
+/* The animation code */
+@keyframes title-animation-scheme {
+    0%   {background-image: url("../img/login_img-1.jpg"); 
+          background-size: cover;
+          background-repeat: no-repeat;}
+    20%  {background-image: url("../img/login_img-2.jpg"); 
+          background-size: cover;
+          background-repeat: no-repeat;}
+    40%  {background-image: url("../img/login_img-3.jpg"); 
+          background-size: cover;
+          background-repeat: no-repeat;}
+    60%  {background-image: url("../img/login_img-4.jpg"); 
+          background-size: cover;
+          background-repeat: no-repeat;}
+    80%  {background-image: url("../img/login_img-5.jpg"); 
+          background-size: cover;
+          background-repeat: no-repeat;}
+    100% {background-image: url("../img/login_img-1.jpg"); 
+          background-size: cover;
+          background-repeat: no-repeat;}
+}
+
+.container .title-animation-frame .title-animation {
+    position: relative;
+    top: -522px;
+    left: 151px;
+    height: 427px;
+    width: 240px;
+    animation-name: title-animation-scheme;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+}
+/* ##### FIM - Animação da página de login ##### */
+
+.container .logo-main {
+    height: auto;
+    max-width: 60%;
+}
+
+.container .login, .container .link {
+    border: solid 1px #dbdbdb;
+    background-color: #fff;
+    padding: 32px 32px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 350px;
+}
+
+.container .login form {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.container .login button {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.feed-card {
+    width: 600px;
+    margin: 50px auto 50px auto;
+    border: solid 1px #dbdbdb;
+    background-color: #fff;
+}
+
+.feed-card .feed-card-title {
+    padding: 20px;
+}
+
+.avatar {
+    border-radius: 50px;
+    width: 40px;
+    height: 40px;
+}
+
+.feed-card .feed-card-title p {
+    margin-left: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.container .feed-card .feed-card-content img {
+    width: 100%;
+}
+
+.feed-card .feed-card-footer {
+    padding: 20px 20px;
+}
+
+.feed-card .feed-card-footer div {
+    margin-top: 12px;
+}
+
+.feed-card .feed-card-footer #feed-post-options {
+    position: relative;
+    height: 26px;
+    width: 110px;
+}
+
+.feed-card .feed-card-footer #feed-post-options li {
+    margin-right: 12px;
+    padding: 0;
+    top: 0;
+    list-style: none;
+    position: absolute;
+}
+
+.feed-card .feed-card-footer #feed-post-options li, .feed-card .feed-card-footer #feed-post-options a {
+    height: 26px;
+    display: block;
+}
+
+#feed-post-like, #feed-post-comment {
+    cursor: pointer;
+}
+
+.feed-card .feed-card-footer #feed-post-options #feed-post-like {
+    left: 0px;
+    width: 26px;
+    background: url('../img/icons.png') -315px -273px;
+}
+
+.feed-card .feed-card-footer #feed-post-options #feed-post-comment {
+    left: 41px;
+    width: 26px;
+    background: url('../img/icons.png') -104px -322px;
+}
+
+.liked {
+    background: url('../img/icons.png') -290px -273px !important;
+}
+
+.feed-card .feed-card-footer .feed-post-description p {
+    margin-bottom: 5px;
+}
+
+.feed-card .feed-card-footer .feed-post-timestamp p {
+    color: #999;
+    font-weight: 600;
+    font-size: 0.825em;
+    text-transform: uppercase;
+}
+
+.feed-card .feed-card-footer .feed-post-comments {
+    min-height: 50px;
+}
+
+.feed-card .feed-card-footer .feed-post-comments input {
+    border: none;
+}
+
+.profile-card {
+    margin-top: 50px;
+    max-width: 900px;
+}
+
+.profile-card .profile-card-avatar {
+    padding: auto;
+    width: 300px;
+}
+
+.avatar-profile {
+    border-radius: 152px;
+    height: 152px;
+    width: 152px;
+}
+
+.profile-card .profile-card-info {
+    width: fit-content;
+    margin: auto 0;
+}
+
+.profile-card > .profile-card-info > .profile-stats > div {
+    margin: 10px 30px 10px 0;
+}
+
+.container > .profile-stats > div {
+    display: none;
+}
+
+.profile-grid {
+    padding: 30px 0;
+    width: 100%;
+}
+
+.profile-grid a {
+    display: inline-block;
+    margin-bottom: 10px;
+    width: calc(33% - 10px);
+    margin-right: 10px;
+}
+
+.profile-grid a:nth-of-type(3n) {
+    margin-right: 0;
+}
+
+.profile-grid img {
+    max-width: 100%;
+    height: auto;
+}
+
+div#modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.54);
+    display: none;
+}
+
+div#modal #closeModalIcon {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    height: 24px;
+    width: 24px;
+    background: url('../img/icon-x.png');
+}
+
+div#modal .feed-card {
+    margin: 0;
+    border: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: fit-content;
+    width: -moz-fit-content;
+    min-width: 800px;
+    height: 500px;
+}
+
+div#modal .feed-card .feed-card-title {
+    position: relative;
+    top: 0;
+    right: 0;
+    overflow: visible;
+    padding: 20px 20px 10px 20px;
+}
+
+div#modal .feed-card .feed-post-description {
+    overflow-y: scroll;
+    padding: 0 20px;
+    height: 250px;
+}
+
+div#modal .feed-card .feed-post-description p {
+    margin-top: 10px;
+}
+
+div#modal .feed-card .feed-card-footer {
+    position: relative;
+    bottom: 0;
+    right: 0;
+    overflow: visible;
+    padding: 0 20px;
+}
+
+/* ##### MEDIA QUERIES ##### */
+
+@media screen and (max-width: 900px) {
+    .container, .profile-card {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    
+    .title-animation-frame {
+        display: none;
+    }
+
+    .container, .profile-card {
+        width: fit-content;
+    }
+
+    .container .feed-card {
+        margin: 0;
+        border: none;
+        background-color: transparent;
+    }
+
+    
+    .container .feed-card .feed-card-content img {
+        width: 100%;
+    }
+
+    .profile-card {
+        margin-top: 50px;
+        max-width: 100%;
+    }
+
+    .profile-card .profile-card-avatar {
+        width: 100px;
+    }
+
+    .avatar-profile {
+        margin: auto 10px;
+        height: 77px;
+        width: 77px;
+    }
+
+    .profile-card-info .profile-username h1 {
+        font-size: 1.5em;
+    }
+
+    .profile-card-info .profile-stats {
+        display: none;
+    }
+
+    .container > .profile-stats > div {
+        display: block;
+        margin-top: 20px;
+        width: calc(32% - 1px);
+        color: rgba(0, 0, 0, 0.3);
+    }
+
+    .container > .profile-stats > div > b {
+        color: rgba(0, 0, 0, 0.87);
+    }
+
+    .profile-grid {
+        margin: 0;
+        width: 100%;
+    }
+
+    .profile-grid a {
+        margin: 0;
+        width: calc(32% - 1px);
+    }
+
+    .profile-grid img {
+        max-width: 100%;
+        height: auto;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+
+    header #pesquisa {
+        display: none;
+    }
+
+    a#sprite-logo {
+        height: 27px;
+        width: 27px;
+        margin: 10px;
+        background: url(../img/icons.png) -327px -222px;
+    }
+
+}
+/* ### Fim do Media ### */

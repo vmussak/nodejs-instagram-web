@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <title>Instagram</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="/css/style.css" rel="stylesheet">
+        <script
+            src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+            crossorigin="anonymous">
+        </script>
+    </head>
+    <body>
+        <header>
+            <div class="container row">
+                <a id="sprite-logo" href="index.html"></a>
+                <input type="text" name="pesquisa" placeholder="Busca">
+                <ul id="navlist">
+                    <li id="navexplore"><a href="feed.html"></a></li>
+                    <li id="navlikes"><a href=""></a></li>
+                    <li id="navprofile"><a href="profile.html"></a></li>
+                </ul>
+            </div>
+        </header>
+        <div class="container">
+            <div class="feed-card">
+                <div class="feed-card-title">
+                    <div class="row">
+                        <img class="avatar" src="img/mussum.jpg">
+                        <p><b>Mussum</b></p>
+                    </div>
+                </div>
+                <div class="feed-card-content">
+                    <img class="feed-post-media" src="img/post.jpg">
+                </div>
+                <div class="feed-card-footer">
+                    <div class="column">
+                        <ul id="feed-post-options">
+                            <li id="feed-post-like" onclick="like()"></li>
+                            <li id="feed-post-comment"></li>
+                        </ul>
+                        <div class="feed-post-likes">
+                            <p><b>Didi</b>, <b>Dedé</b> e <b>Zacarias</b> curtiram isso.</p>
+                        </div>
+                        <div class="feed-post-description">
+                            <p><b>Mussum</b> Mézis que é goodis nóis num havis!</p>
+                            <p><b>tiao_macale</b> Nojento!</p>
+                        </div>
+                        <div class="feed-post-timestamp">
+                            <p>Há 3 horas</p>
+                        </div>
+                        <hr>
+                        <div class="feed-post-comments">
+                            <input type="text" name="new-comment" placeholder="Adicione um comentário...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
+<script>
+    function like(id) {
+        $("#feed-post-like").toggleClass("liked");
+    }
+</script>
